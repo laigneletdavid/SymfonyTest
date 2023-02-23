@@ -14,7 +14,8 @@
         {% endblock %}
     </head>
           {% block body %}
-            <h1>{{ message }}</h1>
+            <h1>{{ titre }}</h1>
+              <p>{{ message }}</p>
               {# Je génere un lien vers ma page de blog grace à la methode PATH, il faut evidement respecter les règles éditées dans le controller #}
             <a href="{{ path('blogapp_blog_showpost', {'_locale': 'fr', 'id_post': '1'}) }}">Lien vers article 1</a>
             <br/>{{ path('blogapp_blog_showpost', {'_locale': 'fr', 'id_post': '1'}) }}
