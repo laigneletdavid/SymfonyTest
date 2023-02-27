@@ -9,7 +9,20 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    {% if titre is not empty %}
+        <h1>{{ titre }}</h1>
+    {% else %}
+        <h1>Ma variable est vide !</h1>
+    {% endif %}
+
+    <h2>Test de boucle FOR</h2>
+    <span>J'affiche la liste des users grâce à un FOR.</span>
+    <ul>
+    {%  for user in users %}
+        <li>{{ user }}</li>
+    {% endfor %}
+    </ul>
 
     This friendly message is coming from:
     <ul>
